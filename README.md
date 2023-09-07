@@ -14,6 +14,7 @@
 
 ```
 CPlusPlus
+  ├───Array
   ├───List
   └───String
 ```
@@ -36,6 +37,11 @@ CPlusPlus
 > 其中*min*(*nums*)为数组 nums 中元素的最小值
 
 题解见[minMoves.cpp](./list/minMoves.cpp)
+
+复杂度分析：
+
+* 时间复杂度：O(n)，其中 n 为数组中的元素数量。我们需要一次遍历求出最小值，一次遍历计算操作次数。
+* 空间复杂度：O(1)
 
 
 ## List
@@ -66,6 +72,11 @@ CPlusPlus
 
 题解见[oddEvenList.cpp](./list/oddEvenList.cpp)
 
+复杂度分析：
+
+* 时间复杂度：O(n)，其中 n是链表的节点数。需要遍历链表中的每个节点，并更新指针
+* 空间复杂度：O(1)。只需要维护有限的指针。
+
 ### 反转链表
 
 给你单链表的头节点 `head` ，请你反转链表，并返回反转后的链表。
@@ -83,6 +94,11 @@ CPlusPlus
 > 需要注意的是$n_1$下一个节点必须指向 $\varnothing$。如果忽略了这一点，链表中可能会产生环。
 
 题解见[reverseList.cpp](./list/reverseList.cpp)
+
+复杂度分析：
+
+* 时间复杂度：O(n)，其中 n是链表的长度。需要对链表的每个节点进行反转操作。
+* 空间复杂度：O(n)，其中 n是链表的长度。空间复杂度主要取决于递归调用的栈空间，最多为 n 层。
 
 ## String
 
@@ -121,6 +137,11 @@ CPlusPlus
 
 题解见[isIsomorphic.cpp](./string/isIsomorphic.cpp)
 
+复杂度分析：
+
+- 时间复杂度：O(n)，其中 n 为字符串的长度。我们只需同时遍历一遍字符串 s 和 t即可。
+- 空间复杂度：O(∣Σ∣)，其中 Σ 是字符串的字符集。哈希表存储字符的空间取决于字符串的字符集大小，最坏情况下每个字符均不相同，需要 O(∣Σ∣) 的空间。
+
 ### 替换空格
 
 请实现一个函数，把字符串 `s` 中的每个空格替换成"%20"。
@@ -129,6 +150,11 @@ CPlusPlus
 
 题解见[replaceSpace.cpp](./string/replaceSpace.cpp)
 
+复杂度分析：
+
+- 时间复杂度：O(n)，其中 n 为字符串的长度。我们只需遍历一遍字符串即可。
+- 空间复杂度：O(n)，额外创建字符串，长度为s.size()+2*n。
+
 ### 左旋字符串
 
 字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串"abcdefg"和数字2，该函数将返回左旋转两位得到的结果"cdefgab"。
@@ -136,6 +162,11 @@ CPlusPlus
 > 获取str[n:] 和 str[:n]子串，目标串target = str[:n] + str[n:];
 
 题解见[reverseLeftWords.cpp](./string/reverseLeftWords.cpp)
+
+复杂度分析：
+
+- 时间复杂度：O(n)，其中 n 为左旋字符串的长度。我们只需遍历一遍左旋字符串即可。
+- 空间复杂度：O(n)。
 
 ### 反转字符串中的单词
 
@@ -166,6 +197,11 @@ CPlusPlus
 > 3.这两次调整的顺序不分先后
 
 题解见[reverseWords.cpp](./string/reverseWords.cpp)
+
+复杂度分析：
+
+- 时间复杂度：O(n)，其中 n 为字符串的长度。
+- 空间复杂度：O(1)。
 
 ### 最长回文子串
 
@@ -222,3 +258,9 @@ CPlusPlus
 >
 
 题解见[selectLongestPalindrome.cpp](./string/selectLongestPalindrome.cpp)
+
+复杂度分析
+
+* 时间复杂度：O(n^2)，其中 n 是字符串的长度。长度为 1和 2的回文中心分别有 n 和 n−1个，每个回文中心最多会向外扩展 O(n) 次。
+
+* 空间复杂度：O(1)。
