@@ -75,7 +75,7 @@ int main(void)
     std::vector<int> v_arr;
     int i = 0;
 
-    std::cout << "please enter am array" << std::endl;
+    std::cout << "please enter an array" << std::endl;
 
 	do {
 		std::cin >> i;
