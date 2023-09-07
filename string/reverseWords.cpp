@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-class swapString {
+class reverseStringWords {
 public:
 
     void swapChar(std::vector<char>&s, int left, int right)
@@ -40,7 +40,7 @@ public:
     }
 };
 
-swapString swapstring;
+reverseStringWords reverseString;
 
 int main(void)
 {
@@ -60,7 +60,7 @@ int main(void)
 
     std::cout << "the string after reversing the words is:"<< std::endl;
 
-    swapstring.reverseWords(v_str);
+    reverseString.reverseWords(v_str);
 
     for(std::vector<char>::size_type i = 0; i<v_str.size(); ++i)
         std::cout << v_str[i];
