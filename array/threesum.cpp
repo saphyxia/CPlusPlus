@@ -54,7 +54,7 @@ int main(void)
 		v_arr.emplace_back(i);
 	} while (std::cin.get() != '\n');
 
-    std::cout << "the  array is: " << std::endl;
+    std::cout << "the array is: " << std::endl;
 
     for(std::vector<int>::size_type i = 0; i < v_arr.size(); ++i)
         std::cout << v_arr[i] << " ";
