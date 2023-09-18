@@ -1,5 +1,5 @@
 #include <iostream>
-#include<unordered_map>
+#include <unordered_map>
 
 class Isomorphic {
 public:
